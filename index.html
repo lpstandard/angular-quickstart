@@ -10,9 +10,18 @@
 <body>
   <div class="container">
     <div ng-controller="mainController">
-      <h1>
-      Hello {{ name +  '. How are you ?' }}
-      </h1>
+    <div>
+
+      <input type="button" value="Click me" ng-click="alerClick()" />
+    </div>
+  
+    <br />
+    <ul>
+      <li ng-repeat="rule in rules">
+        {{ rule.RuleName }}
+      </li>
+    </ul>
+    Add rule: <input type="text" ng-model="newRule" /><a href="#" class="btn btn-default" ng-click="addRule()">Add</a>
     </div>
     
   </div>
